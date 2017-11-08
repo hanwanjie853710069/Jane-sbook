@@ -14,6 +14,11 @@ echo "0 -> master"
 echo "1 -> develop"
 echo "如果是其他分支请直接输入分支名称"
 read barch
+
+istrue=1
+
+while [ $istrue == 1 ]
+do
 tempbarch=""
 if [ $barch == 0 ]
 then
@@ -29,10 +34,13 @@ tempbarch=$barch
 fi
 echo $tempbarch
 git pull origin $tempbarch
-if [ $? == 1 ]
+if [ $? == 0 ]
 then
-echo "指令有误"
+istrue=0
+echo $istrue
 fi
+
+done
 
 echo "请输入要上传的分支名称"
 echo "0 -> master"
