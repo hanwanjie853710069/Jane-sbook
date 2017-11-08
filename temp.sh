@@ -28,7 +28,7 @@ echo "输入的是其他分支"
 tempbarch=$barch
 fi
 echo $tempbarch
-git pull origin $barch
+git pull origin $tempbarch
 
 echo "请输入要上传的分支名称"
 echo "0 -> master"
