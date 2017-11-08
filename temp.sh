@@ -13,12 +13,12 @@ echo "请输入要拉取的分支名称"
 echo "0 -> master"
 echo "1 -> develop"
 echo "如果是其他分支请直接输入分支名称"
-read barch
 
 istrue=1
 
 while [ $istrue == 1 ]
 do
+read barch
 tempbarch=""
 if [ $barch == 0 ]
 then
@@ -38,6 +38,8 @@ if [ $? == 0 ]
 then
 istrue=0
 echo $istrue
+else
+echo "请检查输入的分支名称是否正确"
 fi
 
 done
