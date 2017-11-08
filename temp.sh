@@ -39,7 +39,7 @@ then
 istrue=0
 echo $istrue
 else
-echo "请检查输入的分支名称是否正确"
+echo "请输入正确的分支名称"
 fi
 
 done
