@@ -29,6 +29,10 @@ tempbarch=$barch
 fi
 echo $tempbarch
 git pull origin $tempbarch
+if [ $? == 1 ]
+then
+echo "指令有误"
+fi
 
 echo "请输入要上传的分支名称"
 echo "0 -> master"
