@@ -1,3 +1,5 @@
+
+
 #!/bin/bash
 git add --all
 echo "请输入提交描述文字如果没有默认: 提交代码"
@@ -14,7 +16,7 @@ echo "0 -> master"
 echo "1 -> develop"
 echo "如果是其他分支请直接输入分支名称"
 
-istrue=1
+istrue=10
 
 while [ $istrue == 1 ]
 do
@@ -41,13 +43,17 @@ echo $istrue
 else
 echo "请输入正确的分支名称"
 fi
-
 done
 
 echo "请输入要上传的分支名称"
 echo "0 -> master"
 echo "1 -> develop"
 echo "如果是其他分支请直接输入分支名称"
+
+istruetwo=1
+
+while [ $istruetwo == 1 ]
+
 read barch
 pushbarch=""
 if [ $barch == 0 ]
@@ -64,6 +70,14 @@ pushbarch=$barch
 fi
 echo $pushbarch
 git push origin $pushbarch
+if [ $? == 0 ]
+then
+istruetwo=0
+echo $istruetwo
+else
+echo "请输入正确的分支名称"
+fi
+done
 
 echo "---END---"
 
