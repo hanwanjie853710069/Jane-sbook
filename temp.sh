@@ -53,7 +53,7 @@ echo "如果是其他分支请直接输入分支名称"
 istruetwo=1
 
 while [ $istruetwo == 1 ]
-
+do
 read barch
 pushbarch=""
 if [ $barch == 0 ]
