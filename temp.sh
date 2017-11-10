@@ -54,19 +54,19 @@ istruetwo=1
 
 while [ $istruetwo == 1 ]
 do
-read barch
+read barcha
 pushbarch=""
-if [ $barch == 0 ]
+if [ $barcha == 0 ]
 then
 echo "输入的是master"
 pushbarch="master"
-elif [ $barch == 1 ]
+elif [ $barcha == 1 ]
 then
 echo "输入的是develop"
 pushbarch="develop"
 else
 echo "输入的是其他分支"
-pushbarch=$barch
+pushbarch=$barcha
 fi
 echo $pushbarch
 git push origin $pushbarch
