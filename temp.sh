@@ -16,7 +16,7 @@ echo "0 -> master"
 echo "1 -> develop"
 echo "如果是其他分支请直接输入分支名称"
 
-istrue=10
+istrue=1
 
 while [ $istrue == 1 ]
 do
